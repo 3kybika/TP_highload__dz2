@@ -8,7 +8,8 @@ RUN apt-get update;\
     sudo apt-get update ;\
     sudo apt-get -y install nginx;\ 
     apt-get install apt-transport-https;\ 
-    pip install --no-cache-dir -r requirements.txt
+    pip install --no-cache-dir -r requirements.txt;\
+    rm /etc/nginx/sites-enabled/default
 COPY backend.conf /etc/nginx/conf.d/backend.conf4
 RUN ["chmod", "+x", "./start.sh"]
 CMD ["./start.sh"]
