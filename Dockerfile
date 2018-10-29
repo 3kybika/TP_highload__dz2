@@ -6,6 +6,7 @@ COPY . .
 
 RUN apk add sudo;\
     sudo apk add nginx;\
+    sudo apk add sudo;\
     pip install --no-cache-dir -r requirements.txt;\ 
     pip install --upgrade pip setuptools;\
     pip install -r requirements.txt
