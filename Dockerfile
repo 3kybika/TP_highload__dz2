@@ -14,5 +14,5 @@ RUN apk add sudo;\
 
 COPY default /etc/nginx/sites-enabled/default 
 CMD sudo nginx -s reload;\
-    python manage.py runserver localhost:8001 
+    python manage.py runserver localhost:8081 
 
