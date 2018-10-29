@@ -13,4 +13,4 @@ RUN apt-get update;\
     pip install --no-cache-dir -r requirements.txt
 COPY backend.conf /etc/nginx/conf.d/backend.conf
 CMD ["sudo nginx -s reload;\
-    python manage.py runserver localhost:8081 "]
+    python /usr/src/backend/manage.py runserver localhost:8081 "]
