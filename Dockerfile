@@ -7,7 +7,7 @@ COPY . .
 EXPOSE 80
 
 RUN apt-get update;\
-    sudo apt-get -y install nginx
+    sudo apt-get -y install nginx;\ 
     pip install --no-cache-dir -r requirements.txt;\ 
     pip install --upgrade pip setuptools;\
 
