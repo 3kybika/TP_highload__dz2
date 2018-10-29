@@ -12,7 +12,6 @@ RUN apt-get update;\
     pip install --no-cache-dir -r requirements.txt;\ 
     pip install --upgrade pip setuptools;\
 
-RUN rm /etc/nginx/sites-enabled/default
 COPY default /etc/nginx/conf.d/backend.conf
 CMD ["sudo nginx -s reload;\
     python manage.py runserver localhost:8081 "]
