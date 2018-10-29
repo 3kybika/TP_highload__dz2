@@ -7,7 +7,7 @@ COPY . .
 EXPOSE 80
 
 RUN apk add sudo;\
-    sudo apk add nginx-full;\
+    sudo apk add nginx;\
     pip install --no-cache-dir -r requirements.txt;\ 
     pip install --upgrade pip setuptools;\
     pip install -r requirements.txt
