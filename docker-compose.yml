@@ -1,0 +1,24 @@
+version: '2'
+services:
+  server:
+    build:
+      context: https://github.com/3kybika/highload_backend.git
+    restart: unless-stopped
+    container_name: test_server
+    ports:
+      - 80:80
+  cadvisor-exporter:
+    image: google/cadvisor
+    ports:
+      - 12345:8080
+    restart: unless-stopped
+    volumes:
+      - "/:/rootfs:ro"
+      - "/var/run:/var/run:rw"
+      - "/sys:/sys:ro"
+      - "/var/lib/docker/:/var/lib/docker:ro"
+  nginx_exporter:
+    image: fish/nginx-exporter
+    network_mode: "host"
+    command:
+    - 'nginx.scrape_uri=http://localhost/nginx_status'    
