@@ -13,7 +13,6 @@ RUN apk add sudo;\
     pip install -r requirements.txt
 
 COPY default /etc/nginx/sites-enabled/default 
-ADD ./default /etc/nginx/nginx.conf
 CMD sudo nginx -s reload;\
     python manage.py runserver localhost:8001 
 
