@@ -12,6 +12,7 @@ RUN apk add sudo;\
 
 COPY default /etc/nginx/sites-enabled/default 
 ADD ./default /etc/nginx/nginx.conf
-CMD ["./start.sh"]
+CMD sudo service nginx start;\
+    python manage.py runserver localhost:8001 
 
 EXPOSE 80
