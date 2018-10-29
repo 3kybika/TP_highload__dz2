@@ -1,7 +1,4 @@
 FROM python:3.6
-
-RUN mkdir -p /usr/src/backend
-WORKDIR /usr/src/backend
 COPY . .
 
 EXPOSE 80
