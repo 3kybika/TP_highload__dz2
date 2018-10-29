@@ -7,6 +7,8 @@ services:
     container_name: test_server
     ports:
       - 80:80
+     volumes:
+      - ./start.sh:/start.sh
     command: "./start.sh"
   cadvisor-exporter:
     image: google/cadvisor
