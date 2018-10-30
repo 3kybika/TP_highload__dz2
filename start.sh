@@ -1,3 +1,3 @@
 #!/bin/bash
-sudo nginx -s reload
+sudo nginx -s start
 python manage.py runserver localhost:8081
