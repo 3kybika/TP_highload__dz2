@@ -10,6 +10,6 @@ RUN apt-get update;\
 RUN sudo apt-get update;\
     sudo apt-get -y install nginx-full 
 RUN rm /etc/nginx/sites-enabled/default
-COPY backend.conf /etc/nginx/conf.d/backend.conf4
+COPY backend.conf /etc/nginx/conf.d/backend.conf
 RUN ["chmod", "+x", "./start.sh"]
 CMD ["./start.sh"]
