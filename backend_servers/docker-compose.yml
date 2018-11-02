@@ -2,7 +2,7 @@ version: '3'
 services:
   server:
     build:
-      context: https://github.com/3kybika/tp_highload_backend.git
+      context: https://github.com/3kybika/tp_highload_backend.git#:backend_servers
     restart: unless-stopped
     container_name: test_server
     ports:
