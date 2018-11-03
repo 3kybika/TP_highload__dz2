@@ -3,7 +3,7 @@ version: '3'
 services:
   nginx-balancer:
     build:
-      context:https://github.com/3kybika/TP_highload__hw2.git#:balancer_server/balancer
+      context: https://github.com/3kybika/TP_highload__hw2.git#:balancer_server/balancer
     container_name: balancer
     ports:
       - 80:80
