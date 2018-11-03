@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  nginx-balancer:
+    build:
+      context:https://github.com/3kybika/TP_highload__hw2.git#:balancer_server/balancer
+    container_name: balancer
+    ports:
+      - 80:80
+    restart: always
+  prometheus:
+    build:
+      context: https://github.com/3kybika/TP_highload__hw2.git#:balancer_server/prometheus
+    ports:
+      - 9090:9090
+    restart: unless-stopped
+  grafana:
+    user: root
+    image: grafana/grafana
+    ports:
+      - 3000:3000
+    volumes:
+      - ./grafana:/var/lib/grafana:rw
+    restart: unless-stopped
+    
+volumes:
+  grafana: {}
