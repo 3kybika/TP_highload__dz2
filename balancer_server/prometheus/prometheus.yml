@@ -30,16 +30,16 @@ scrape_configs:
   - job_name: 'metrics-exporter-0'
     scrape_interval: 5s
     static_configs:
-      - targets: ['109.234.39.3:9113']
+      - targets: ['localhost:9113']
   - job_name: 'metrics-exporter-1'
     scrape_interval: 5s
     static_configs:
-      - targets: ['109.234.39.3:9113']
+      - targets: ['185.231.154.148:9113']
   - job_name: 'metrics-exporter-2'
     scrape_interval: 5s
     static_configs:
-      - targets: ['109.234.39.4:9113']
+      - targets: ['185.231.153.190:9113']
   - job_name: 'metrics-exporter-3'
     scrape_interval: 5s
     static_configs:
-      - targets: ['109.234.39.5:9913']
+      - targets: ['185.231.150.161:9913']
