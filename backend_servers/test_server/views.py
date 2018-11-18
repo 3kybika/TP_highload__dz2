@@ -9,7 +9,7 @@ import math
 def strangeFunction(request):
     #start = time.time()
     someNumber = random.randint(0,100);
-    for i in range(100000):
+    for i in range(100):
         someNumber += math.atan(math.sin(someNumber * random.randint(0,100)))*math.atan(math.sin(someNumber * random.randint(0,100)))
     
     #statsd.incr('s1__requests_num')
