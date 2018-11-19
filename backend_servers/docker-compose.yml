@@ -1,6 +1,6 @@
 version: '3'
 services:
-  server:
+  test_server:
     build:
       context: https://github.com/3kybika/TP_highload__hw2.git#:backend_servers
     restart: unless-stopped
