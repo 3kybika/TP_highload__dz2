@@ -22,4 +22,4 @@ services:
     image: fish/nginx-exporter
     network_mode: "host"
     command:
-    - 'nginx.scrape_uri=http://localhost/nginx_status'    
+    - 'nginx.scrape_uri=http://server/nginx_status'    
