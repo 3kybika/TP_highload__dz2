@@ -35,7 +35,7 @@ services:
     container_name: prodvtsexporter
     restart: unless-stopped
     environment:
-      - NGINX_HOST = http://nginx_proxy:9913/vhost_status/format/json
+      - NGINX_HOST = http://nginx_proxy:8080/vhost_status/format/json
     restart: unless-stopped
     expose:
       - 9913
