@@ -13,8 +13,6 @@ services:
     build:
       context: https://github.com/3kybika/TP_highload__hw2.git#:backend_servers
     restart: unless-stopped
-    ports:
-      - 81:81
     container_name: test_server
     command: "./start.sh"
     
