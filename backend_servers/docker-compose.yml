@@ -21,4 +21,4 @@ services:
   nginx_exporter:
     image: fish/nginx-exporter
     command:
-    - 'nginx.scrape_uri=http://localhost:80/nginx_status'    
+    - 'nginx.scrape_uri=http://test_server:80/nginx_status'    
