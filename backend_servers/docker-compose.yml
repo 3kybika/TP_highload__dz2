@@ -5,6 +5,7 @@ services:
     image: xcgd/nginx-vts
     ports:
       - 80:80
+      - 8080:9913
     volumes:
       - ./configs:/etc/nginx
     restart: unless-stopped
