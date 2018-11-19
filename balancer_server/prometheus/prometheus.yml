@@ -38,7 +38,7 @@ scrape_configs:
   - job_name: 'metrics-exporter-2'
     scrape_interval: 5s
     static_configs:
-      - targets: ['185.231.153.190:9913']
+      - targets: ['95.142.46.82:9913']
   - job_name: 'metrics-exporter-3'
     scrape_interval: 5s
     static_configs:
