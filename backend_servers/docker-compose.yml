@@ -20,6 +20,5 @@ services:
       - "/var/lib/docker/:/var/lib/docker:ro"
   nginx_exporter:
     image: fish/nginx-exporter
-    network_mode: "server"
     command:
-    - 'nginx.scrape_uri=http://server/nginx_status'    
+    - 'nginx.scrape_uri=http://server:80/nginx_status'    
