@@ -1,13 +1,21 @@
 version: '3'
 services:
+
+  nginx_proxy:
+    image: xcgd/nginx-vts
+    ports:
+      - 80:80
+    volumes:
+      - ./configs:/etc/nginx
+    restart: unless-stopped
+
   test_server:
     build:
       context: https://github.com/3kybika/TP_highload__hw2.git#:backend_servers
     restart: unless-stopped
     container_name: test_server
-    ports:
-      - 80:80
     command: "./start.sh"
+    
   cadvisor-exporter:
     image: google/cadvisor
     ports:
@@ -18,7 +26,15 @@ services:
       - "/var/run:/var/run:rw"
       - "/sys:/sys:ro"
       - "/var/lib/docker/:/var/lib/docker:ro"
-  nginx_exporter:
-    image: fish/nginx-exporter
-    command:
-    - 'nginx.scrape_uri=http://185.231.153.190/nginx_status'    
+          
+  prodvtsexporter:
+    image: sophos/nginx-vts-exporter
+    container_name: prodvtsexporter
+    restart: unless-stopped
+    environment:
+      - NGINX_STATUS: 'http://nginx_proxy/vhost_status/format/json'
+    restart: unless-stopped
+    expose:
+      - 9113
+    ports:
+      - 9113:9113
