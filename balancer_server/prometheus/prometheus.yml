@@ -34,12 +34,12 @@ scrape_configs:
   - job_name: 'metrics-exporter-1'
     scrape_interval: 5s
     static_configs:
-      - targets: ['95.142.47.212:9913']
+      - targets: ['95.142.47.212:9913', '95.142.47.212:9000']
   - job_name: 'metrics-exporter-2'
     scrape_interval: 5s
     static_configs:
-      - targets: ['95.142.46.251:9913']
+      - targets: ['95.142.46.251:9913', '95.142.46.251:9000']
   - job_name: 'metrics-exporter-3'
     scrape_interval: 5s
     static_configs:
-      - targets: ['95.142.47.111:9913']
+      - targets: ['95.142.47.111:9913', '95.142.47.111:9000']
