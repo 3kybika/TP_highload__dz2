@@ -11,7 +11,7 @@ def strangeFunction(request):
     someNumber = random.randint(0,100);
     for i in range(100):
         someNumber += math.atan(math.sin(someNumber * random.randint(0,100)))*math.atan(math.sin(someNumber * random.randint(0,100)))
-    
+    someNumber = 1
     #statsd.incr('s1__requests_num')
     #perf_time = int((time.time() - start) * 1000)
     #statsd.timing('s1__perf_time', perf_time)
